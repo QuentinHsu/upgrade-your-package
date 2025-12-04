@@ -1,0 +1,15 @@
+.vscode/**
+.vscode-test/**
+src/**
+.gitignore
+.vscodeignore
+tsconfig.json
+eslint.config.mjs
+**/*.map
+**/*.ts
+*.vsix
+pnpm-lock.yaml
+test-package.json
+AGENT.md
+.vscode/launch.json
+.vscode/tasks.json

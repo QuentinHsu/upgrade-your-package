@@ -1,0 +1,67 @@
+{
+  "activationEvents": [
+    "onLanguage:json"
+  ],
+  "author": "QuentinHsu <https://github.com/QuentinHsu>",
+  "categorer": "QuentinHsu",
+  "categories": [
+    "Other"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "upgradeYourPackage.checkUpdates",
+        "title": "Check Package Updates"
+      }
+    ]
+  },
+  "dependencies": {
+    "jsonc-parser": "^3.3.1",
+    "semver": "7.7.3"
+  },
+  "description": "Automatically check for package updates in package.json and provide inline update hints",
+  "devDependencies": {
+    "@quentinhsu/biome-config": "^0.3.5",
+    "@types/node": "24.10.1",
+    "@types/semver": "^7.7.1",
+    "@types/vscode": "1.106.1",
+    "@vscode/vsce": "3.7.1",
+    "typescript": "5.9.3"
+  },
+  "displayName": "Upgrade Your Package",
+  "engines": {
+    "vscode": "^1.106.0"
+  },
+  "homepage": "https://github.com/QuentinHsu/upgrade-your-package#readme",
+  "icon": "assets/icon.png",
+  "keywords": [
+    "package",
+    "npm",
+    "update",
+    "version",
+    "dependency",
+    "package.json",
+    "upgrade",
+    "outdated"
+  ],
+  "license": "MIT",
+  "main": "./out/extension.js",
+  "name": "upgrade-your-package",
+  "packageManager": "pnpm@10.13.1",
+  "publisher": "QuentinHsu",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/QuentinHsu/upgrade-your-package.git"
+  },
+  "scripts": {
+    "build": "pnpm build:package",
+    "build:package": "pnpm vsce package --no-dependencies",
+    "compile": "tsc -p ./",
+    "lint:fix": "biome format --write .",
+    "pretest": "pnpm run compile && pnpm run lint",
+    "test": "vscode-test",
+    "vscode:prepublish": "pnpm run compile",
+    "watch": "tsc -watch -p ./"
+  },
+  "version": "0.0.1"
+}
